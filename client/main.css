@@ -1,89 +1,108 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-body {
-  background: #456;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.login {
-  width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
-}
-
-/* Reset top and bottom margins from certain elements */
-.login-header,
-.login p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* The triangle form is achieved by a CSS hack */
-.login-triangle {
-  width: 0;
-  margin-right: auto;
-  margin-left: auto;
-  border: 12px solid transparent;
-  border-bottom-color: #28d;
-}
-
-.login-header {
-  background: #28d;
-  padding: 20px;
-  font-size: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.login-container {
-  background: #ebebeb;
-  padding: 12px;
-}
-
-/* Every row inside .login-container is defined with p tags */
-.login p {
-  padding: 12px;
-}
-
-.login input {
+html {
   box-sizing: border-box;
-  display: block;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  padding: 16px;
-  outline: 0;
-  font-family: inherit;
-  font-size: 0.95em;
+}
+ 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+ 
+ 
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background: #333;
+}
+ 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+ 
+header {
+  padding: 20px 15px 15px 15px;
+  position: relative;
+}
+ 
+h1 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  display: inline-block;
+  margin-right: 1em;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 600px;
+  display: inline-block;
+  margin-right: 1em;
+}
+.commentForm {
+	margin-left: 50px;
+}
+input[type=submit] {
+	margin-left: 20px;
+    padding:5px 15px; 
+    background:#ccc; 
+    border:2px solid;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 
-.login input[type="email"],
-.login input[type="password"] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
+ 
+ul {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+ 
+.delete {
+  float: right;
+  font-weight: bold;
+  background: #DE4F4F;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
 }
 
-/* Text fields' focus effect */
-.login input[type="email"]:focus,
-.login input[type="password"]:focus {
-  border-color: #888;
+ul.outer{
+	list-style-type: none;
+	background-color: #808080;
 }
-
-.login input[type="submit"] {
-  background: #28d;
-  border-color: transparent;
-  color: #fff;
-  cursor: pointer;
+ul.inner{
+    list-style-type: none;
 }
-
-.login input[type="submit"]:hover {
-  background: #17c;
+ul li div{
+	border:0.1px solid #E8E8E8 ;
 }
-
-/* Buttons' focus effect */
-.login input[type="submit"]:focus {
-  border-color: #05a;
+dt{ 
+  margin-left: 20px; 
+  position: relative;
+  list-style: none;
+  color: black;
+  font-size: 14px; 
+  font-weight: bold;
+}
+dd{  
+  margin-left: 30px;
+  position: relative;
+  font-color:#C0C0C0;
+  list-style: none;
+  padding: 10px 15px;
+  
+}
+ 
+li.checked {
+  color: #888;
+}
+ 
+li.checked .text {
+  text-decoration: line-through;
 }
